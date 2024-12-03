@@ -1,0 +1,38 @@
+
+
+Typescript :- Typescript is a progaming language developed by microsoft that is a superset of javascript it adds static typing and other features to javascript makeing it more robust and easier to manage especially for for large-scale application. 
+
+
+Datatype:-
+
+1. Primitive Datatype :- number ,  string ,  boolean 
+2.Reference type Datatype :- arrays , Enum , tuples , any , unknown , void , null , undefined , never
+
+
+
+Enumeration (or enum) is a concept used in programming to define a set of named constants. It is a way to represent a collection of related values in a more readable and maintainable manner. Instead of using arbitrary numbers or strings in your code, you use meaningful names to represent those values, which improves clarity and reduces errors.
+
+In general terms, an enumeration is a type that consists of a set of named values called elements or members. These values can be either numbers, strings, or other constants, depending on the programming language.
+
+differnce between any or unknown ? :- 
+
+When to Use:
+
+Use any when:
+
+ #You need flexibility and don’t care about type checking (e.g., when dealing with external data that has an unknown or dynamic structure).
+ #You are temporarily migrating or integrating JavaScript code into TypeScript.
+
+
+Use unknown when:
+
+#You need to handle potentially different types but want to ensure you validate the type before performing any operations.
+#You want to take advantage of TypeScript’s type safety features, even when dealing with dynamic values.
+#In most cases, unknown is preferred over any because it enforces type safety while still allowing flexibility.
+
+
+
+
+
+
+
