@@ -31,7 +31,9 @@ Use unknown when:
 #In most cases, unknown is preferred over any because it enforces type safety while still allowing flexibility.
 
 
+# interface :- An interface in TypeScript is a way to describe the structure of an object. It defines what properties and methods an object should have and their types, ensuring your code is consistent and error-free. It’s like a blueprint for objects.
 
+# intersection of type :- In TypeScript, the intersection of types combines multiple types into one. An object of the resulting type must satisfy all the properties and rules of the combined types.
 
 
 

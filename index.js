@@ -61,3 +61,25 @@ console.log();
 let inference = "pata lagao";
 // annotations :- jab ham : lagake kisi variable ka type deside karte hain usse annotations kahte hain annotation ham function ke perametre me bhi kartr hain aur return type me bhi aur ham multiple annotation bhi klar sakte hain 
 let annotations = true;
+function getUser(obj) {
+}
+getUser({ name: "anand", age: 19, ismairred: false });
+function getAdmin(object) {
+    console.log(object.gender, object.ismairried, object.name);
+}
+getAdmin({ gender: "male", ismairried: true, name: "anand", age: 19 });
+let naam = "anand";
+let horror = true;
+// classes 
+class Music {
+    constructor(name, singer, duration, paid) {
+        this.name = name;
+        this.singer = singer;
+        this.duration = duration;
+        this.paid = paid;
+    }
+}
+let song1 = new Music("kallo", "ajay hudda", 2000, true);
+song1.name = "matak matak";
+console.log(song1);
+//

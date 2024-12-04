@@ -106,6 +106,95 @@ let inference = "pata lagao"
 
 let annotations : boolean | string= true ;  
 
+// interface :- isse object ka perdefine interface kah sakte hain jis tarah ham typescript me type define karte hain ussi tarah interface define karte hain 
+// EX = 
+
+interface user {
+    name : string;
+    age :number;
+    gender? : string;
+    ismairred : boolean;
+}
+
+function getUser(obj : user){
+
+}
+
+getUser({name:"anand",age:19,ismairred:false});
+
+// yaha pe jo key-value pair hamne interface me rakhe hain keval vahi  ham object me pass kar sakte hain ager extra value de to error thow karega ager ham koi value optional rakhni hai to vaha ?lagana impotant hai 
+
+
+// Extanding interface :- issme vo interface me hoga vo to hai hi ham kuch aur key-value pair bhi add kar sakte hain 
+
+interface user2 {
+    name:string;
+    age :number;
+    ismairried? : boolean;
+}
+
+interface Admin extends user2 {
+    gender : string;
+}
+
+function getAdmin(object : Admin){
+         console.log( object.gender,
+            object.ismairried,
+            object.name);
+         
+}
+
+getAdmin({gender:"male",ismairried:true,name:"anand",age:19})
+
+// type aliases :- typscript me ham apne custom type bhi bna sakte hain jinhe type aliases khate hain 
+
+type singhalCourt = string;
+let naam :singhalCourt = "anand"
+
+// ex.2 
+
+type naam2 = number| string | boolean
+
+let horror :naam2 =true;
+
+// intersection of type :- 
+
+//ex-
+
+type User = {
+    id : number;
+    name:string;
+
+}
+
+type admin = User & {
+    getDetails(User : string):void 
+}
+
+
+// classes 
+
+class Music {
+    constructor(public name:string, public singer:string ,public duration:number ,public paid:boolean ){
+
+    }
+
+    
+
+}
+
+let song1 =new Music("kallo","ajay hudda",2000 , true)
+
+song1.name = "matak matak"
+
+console.log(song1);
+
+//
+
+
+
+
+
 
 
 
