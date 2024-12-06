@@ -189,18 +189,99 @@ song1.name = "matak matak"
 
 console.log(song1);
 
-//
+// this keyword :- classes ke scope me kisi methorid ke ander kisi ke ander (jab tak vo us methorid ka part na ho ) kisi value ya kisi dusre methorid ko call ya accesses karne ke liye this ka use hota hai 
+
+class bottelmeker{
+    public naam1:string;
+     constructor(  naam1:string){
+        
+            
+     }    
+     
+
+}
+
+let b1 = new bottelmeker("milton")
+console.log(b1);
+
+// public ,private and protected:-
+// :- jab ham classes public access modifiers banate hain to vo clesses methorids and subclesses and cless scope ke bhar bhi this ka use karke accessible  hoti hain || per jab ham usse protected access modifiers me banate hain to vo keval cless ke scope and subclasses me hi accessible hoti hain  // but private access modifiers me only clesses ke scope me hi accessiblr hain 
+
+
+class human {
+    constructor(private name:string){
+
+    }
+
+    getname(){
+        this.name="king anand"
+    }
+}
+
+let h1 = new human("Anand")
+console.log(h1);
+h1.getname();
+
+// readonly :- jab kisi classes ki value ko static rakhna chhate hain to usske aage readonly lagake us change hone se rok sakte hain 
+// ex= 
+
+class boys {
+    constructor(public readonly power:boolean){
+
+    }
+}
+
+let boy1 = new boys(true)
+console.log(boy1)
+
+
+// getter and setter in ts :- 
 
 
 
+class male {
+    constructor(public name:string , public age:number){
+
+    }
+
+    
+    public get getname() : string {
+        return this.name
+    }
+
+    
+    public set setage(v : number) {
+        this.age = v;
+    }
+    
+    
+}
+
+let male1 = new male("Anand",19)
+console.log(male1);
+male1.setage=19.5;
+console.log(male1)
+
+// static :-  jab ham kisi class me bina new ko chalye koi value set kar ho to ham use value ke aage static lage ye kar sakte hain 
+
+class Girl {
+   static getRandomNumber(){
+       return Math.random()
+    }
+}
+
+console.log(Girl.getRandomNumber());
 
 
+// abstract class :- 
 
+class CookingEssentials {
+    constructor(protected gas:string,public gassname:string){}
+}
 
-
-
-
-
+class Sabji extends CookingEssentials{
+    
+}
 
 
 
