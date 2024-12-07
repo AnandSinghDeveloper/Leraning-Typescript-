@@ -144,3 +144,44 @@ class CookingEssentials {
 }
 class Sabji extends CookingEssentials {
 }
+// optional and defult parametre in fuction
+let issan = (name, cb) => {
+    cb(19);
+};
+issan("Anand", (age) => {
+    console.log(issan);
+});
+// it is optional function parametre
+let aadmi = (name, age, gender) => {
+    console.log(name, age, gender);
+};
+aadmi('anand', 19, "male");
+aadmi('ladbataq', 18);
+// it is defult function parametre
+function ladki(name, age, gender = "bata nhi rha hai matlab😒") {
+    console.log(name, gender, age);
+}
+ladki("tuyen", 30, "female");
+ladki('lagbatak', 18);
+// rest and spread opreter 
+// rest :- jab funtion ke  parametre me ager ... lagaya to aap waha pe diye gaye sar arguments ko ek hi variable me as a array rakh sakte ho 
+let friends = (...friend) => {
+    console.log(friend);
+};
+friends("anand ", "bakshi ", "jatin", "saurbh", "monjot", "tuyen", "bhavisya");
+// spread :- jab hame kisi array ya object ko copy karna ho to function ke argument me spread ka use karke kar sakte hain 
+let chai = ["tata", "taza"];
+let chai2 = [...chai];
+console.log(chai2);
+function abcd(a, b) {
+    if (typeof a === "string" && b === undefined) {
+        console.log("hey");
+    }
+    if (typeof a === "string" && b === Number) {
+        return 123;
+    }
+    else
+        throw new Error("kuch to gadbad hai daya");
+}
+abcd("hey");
+abcd("hey", 25);
